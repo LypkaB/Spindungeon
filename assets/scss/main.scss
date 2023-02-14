@@ -1,3 +1,28 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: 1980px) {
+        width: 1920px;
+    }
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.presentation {
+    &__wrap {
+        background: url('../images/presentation-bg.jpg') no-repeat center / cover;
+    }
+}
