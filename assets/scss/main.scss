@@ -4,10 +4,12 @@
 
 body {
     font-family: 'Noto Sans', sans-serif;
+    background-color: black;
 }
 
 .container {
-    width: 61%;
+    padding-left: 19.5%;
+    padding-right: 19.5%;
     margin: 0 auto;
 
     @media (min-width: 1980px) {
@@ -36,6 +38,7 @@ h1, h2, h3 {
 
 .presentation {
     padding-top: 190px;
+    padding-bottom: 45%;
     color: white;
     text-align: center;
 
@@ -109,4 +112,90 @@ h1, h2, h3 {
     font-weight: 700;
     color: white;
     text-transform: uppercase;
+}
+
+.free-games {
+    position: relative;
+    top: -295px;
+
+    &__text {
+        margin-bottom: 60px;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                &:first-child {
+                    flex-basis: 30%;
+                    font-family: 'Jockey One', sans-serif;
+                    font-size: 46px;
+                    font-weight: 400;
+                    color: white;
+                    line-height: 46.14px;
+                    text-transform: uppercase;
+                }
+
+                &:nth-child(2) {
+                    flex-basis: 42%;
+                    padding-top: 6px;
+                    font-size: 18px;
+                    line-height: 26.35px;
+                    color: #d6d6d6;
+                }
+            }
+        }
+    }
+
+    &__swiper {
+        padding-left: 19.5%;
+
+        .swiper-slide {
+            width: 354px !important;
+            background-color: #212121;
+        }
+    }
+
+    &__img {
+        width: 354px;
+        height: 286px;
+    }
+
+    &__info-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 21px 31px 20px 20px;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        column-gap: 3px;
+        margin-bottom: 12px;
+
+        &_fire, &_empty {
+            width: 21px;
+            height: 31px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &_fire {
+            background-image: url('../images/icon-fire.svg');
+        }
+
+        &_empty {
+            background-image: url('../images/icon-fire_empty.svg');
+        }
+    }
+
+    &__name {
+        font-family: 'Jockey One', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        color: white;
+        text-transform: uppercase;
+    }
 }

@@ -7,10 +7,12 @@
 
 body {
   font-family: 'Noto Sans', sans-serif;
+  background-color: black;
 }
 
 .container {
-  width: 61%;
+  padding-left: 19.5%;
+  padding-right: 19.5%;
   margin: 0 auto;
 }
 
@@ -44,6 +46,7 @@ h3 {
 
 .presentation {
   padding-top: 190px;
+  padding-bottom: 45%;
   color: white;
   text-align: center;
 }
@@ -126,6 +129,109 @@ h3 {
   background: -o-linear-gradient(3.58deg, #ffc700 -1.87%, #f3254c 119.59%, #f32525 119.59%);
   background: linear-gradient(86.42deg, #ffc700 -1.87%, #f3254c 119.59%, #f32525 119.59%);
   font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+.free-games {
+  position: relative;
+  top: -295px;
+}
+
+.free-games__text {
+  margin-bottom: 60px;
+}
+
+.free-games__text .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.free-games__text .container span:first-child {
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  font-family: 'Jockey One', sans-serif;
+  font-size: 46px;
+  font-weight: 400;
+  color: white;
+  line-height: 46.14px;
+  text-transform: uppercase;
+}
+
+.free-games__text .container span:nth-child(2) {
+  -ms-flex-preferred-size: 42%;
+  flex-basis: 42%;
+  padding-top: 6px;
+  font-size: 18px;
+  line-height: 26.35px;
+  color: #d6d6d6;
+}
+
+.free-games__swiper {
+  padding-left: 19.5%;
+}
+
+.free-games__swiper .swiper-slide {
+  width: 354px !important;
+  background-color: #212121;
+}
+
+.free-games__img {
+  width: 354px;
+  height: 286px;
+}
+
+.free-games__info-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 21px 31px 20px 20px;
+}
+
+.free-games__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 3px;
+  -moz-column-gap: 3px;
+  column-gap: 3px;
+  margin-bottom: 12px;
+}
+
+.free-games__rating_fire,
+.free-games__rating_empty {
+  width: 21px;
+  height: 31px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.free-games__rating_fire {
+  background-image: url("../images/icon-fire.svg");
+}
+
+.free-games__rating_empty {
+  background-image: url("../images/icon-fire_empty.svg");
+}
+
+.free-games__name {
+  font-family: 'Jockey One', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
   color: white;
   text-transform: uppercase;
 }
