@@ -118,6 +118,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.header__menu ul li a:hover {
+  color: #bfbfbf;
+}
+
 .header__menu-panel_min {
   display: none;
   -webkit-box-align: center;
@@ -190,6 +194,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.link-register:hover {
+  opacity: 0.85;
+}
+
 .free-games {
   position: relative;
   top: -295px;
@@ -240,6 +248,10 @@ h3 {
   display: block;
   width: 354px !important;
   background-color: #212121;
+}
+
+.free-games__item:hover {
+  background: rgba(243, 37, 76, 0.3);
 }
 
 .free-games__img {

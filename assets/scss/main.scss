@@ -92,6 +92,10 @@ h1, h2, h3 {
             li a {
                 font-weight: 500;
                 text-transform: uppercase;
+
+                &:hover {
+                    color: darken(white, 25%);
+                }
             }
         }
 
@@ -157,6 +161,10 @@ h1, h2, h3 {
     font-weight: 700;
     color: white;
     text-transform: uppercase;
+
+    &:hover {
+        opacity: 0.85;
+    }
 }
 
 .free-games {
@@ -204,6 +212,10 @@ h1, h2, h3 {
         display: block;
         width: 354px !important;
         background-color: #212121;
+
+        &:hover {
+            background: rgba(243, 37, 76, 0.3);
+        }
     }
 
     &__img {
