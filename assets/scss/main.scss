@@ -8,13 +8,9 @@ body {
 }
 
 .container {
-    padding-left: 19.5%;
-    padding-right: 19.5%;
+    padding-left: 19%;
+    padding-right: 19%;
     margin: 0 auto;
-
-    @media (min-width: 1980px) {
-        width: 1920px;
-    }
 }
 
 ul, li {
@@ -73,6 +69,7 @@ h1, h2, h3 {
 .header, .header__menu ul {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header {
@@ -88,12 +85,61 @@ h1, h2, h3 {
         letter-spacing: 3px;
     }
 
-    &__menu ul {
-        column-gap: 23px;
+    &__menu {
+        ul {
+            column-gap: 23px;
 
-        li a {
-            font-weight: 500;
-            text-transform: uppercase;
+            li a {
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+
+        &-panel {
+            &_min {
+                display: none;
+                align-items: center;
+                column-gap: 30px;
+
+                .header__menu {
+                    //display: block;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: -30px;
+
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
+            }
+
+            &--btn {
+                width: 40px;
+                height: 10px;
+                position: relative;
+
+                &::before, &::after {
+                    content: '';
+                    width: 40px;
+                    height: 3px;
+                    border-radius: 15px;
+                    background-color: white;
+                    position: absolute;
+                }
+
+                &::before {
+                    top: -3px;
+                    left: 0;
+                }
+
+                &::after {
+                    left: 0;
+                    bottom: -3px;
+                }
+            }
         }
     }
 
@@ -103,6 +149,50 @@ h1, h2, h3 {
 
     .link-register {
         margin-left: 32px;
+    }
+
+    &__menu-btn {
+        /*width: 40px;
+        height: 10px;
+        position: relative;*/
+
+        /*&::before, &::after {
+            content: '';
+            width: 40px;
+            height: 3px;
+            border-radius: 15px;
+            background-color: white;
+            position: absolute;
+        }
+
+        &::before {
+            top: -3px;
+            left: 0;
+        }
+
+        &::after {
+            left: 0;
+            bottom: -3px;
+        }*/
+
+        /*&--nav {
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -35px;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                li a {
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+            }
+        }*/
     }
 }
 
@@ -197,5 +287,90 @@ h1, h2, h3 {
         font-weight: 400;
         color: white;
         text-transform: uppercase;
+    }
+}
+
+.show {
+    display: block !important;
+}
+
+@media (min-width: 1980px) {
+    .container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .free-games__swiper {
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 1919px) {
+    .container {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .free-games__swiper {
+        padding-left: 15%;
+    }
+}
+
+@media (max-width: 1919px) {
+    .container {
+        padding-left: 9%;
+        padding-right: 9%;
+    }
+
+    .free-games__swiper {
+        padding-left: 9%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+    }
+
+    .free-games__swiper {
+        padding-left: 3.5%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .header {
+        column-gap: 30px;
+
+        &__menu ul li a {
+            font-size: 12px;
+        }
+
+        .link-register {
+            padding: 12px 30px;
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        position: relative;
+
+        &__menu {
+            display: none;
+
+            &-panel_min {
+                display: flex;
+
+                .link-register {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .link-register {
+        display: none;
     }
 }

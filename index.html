@@ -36,6 +36,23 @@
                 <a href="#!" class="link-register">
                     <span>Register</span>
                 </a>
+
+                <div class="header__menu-panel_min">
+                    <div class="header__menu-panel--btn"></div>
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="header__link_active"><a href="#!">Home</a></li>
+                            <li><a href="#!">About us</a></li>
+                            <li><a href="#!">Privacy policy</a></li>
+                            <li><a href="#!">Terms & condition</a></li>
+                            <li><a href="#!">Contact us</a></li>
+                        </ul>
+                    </nav>
+
+                    <a href="#!" class="link-register">
+                        <span>Register</span>
+                    </a>
+                </div>
             </header>
 
             <section class="presentation">
@@ -173,6 +190,15 @@
             slidesPerView: 4,
             spaceBetween: 20
         });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const headerMenuPanelBtn = document.querySelector('.header__menu-panel--btn');
+            const headerMenu = document.querySelector('.header__menu-panel_min .header__menu');
+
+            headerMenuPanelBtn.addEventListener('click', function () {
+                headerMenu.classList.contains('show') ? headerMenu.classList.remove('show') : headerMenu.classList.add('show');
+            })
+        })
     </script>
 </body>
 </html>
