@@ -66,13 +66,10 @@ h1, h2, h3 {
     }
 }
 
-.header, .header__menu ul {
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.header {
     column-gap: 60px;
 
     a {
@@ -87,6 +84,9 @@ h1, h2, h3 {
 
     &__menu {
         ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             column-gap: 23px;
 
             li a {
@@ -102,7 +102,6 @@ h1, h2, h3 {
                 column-gap: 30px;
 
                 .header__menu {
-                    //display: block;
                     width: 100%;
                     position: absolute;
                     left: 0;
@@ -150,50 +149,6 @@ h1, h2, h3 {
     .link-register {
         margin-left: 32px;
     }
-
-    &__menu-btn {
-        /*width: 40px;
-        height: 10px;
-        position: relative;*/
-
-        /*&::before, &::after {
-            content: '';
-            width: 40px;
-            height: 3px;
-            border-radius: 15px;
-            background-color: white;
-            position: absolute;
-        }
-
-        &::before {
-            top: -3px;
-            left: 0;
-        }
-
-        &::after {
-            left: 0;
-            bottom: -3px;
-        }*/
-
-        /*&--nav {
-            display: block;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            bottom: -35px;
-
-            ul {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                li a {
-                    font-weight: 500;
-                    text-transform: uppercase;
-                }
-            }
-        }*/
-    }
 }
 
 .link-register {
@@ -239,11 +194,16 @@ h1, h2, h3 {
 
     &__swiper {
         padding-left: 19.5%;
+    }
 
-        .swiper-slide {
-            width: 354px !important;
-            background-color: #212121;
-        }
+    &__block {
+        display: none;
+    }
+
+    &__item {
+        display: block;
+        width: 354px !important;
+        background-color: #212121;
     }
 
     &__img {
@@ -370,7 +330,114 @@ h1, h2, h3 {
         }
     }
 
+    .presentation {
+        padding-top: 120px;
+
+        &__wrap {
+            padding-top: 25px;
+        }
+
+        h1 {
+            font-size: 54px;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+    }
+
     .link-register {
         display: none;
+    }
+
+    .free-games__text .container span {
+        &:first-child {
+            font-size: 40px;
+        }
+
+        &:nth-child(2) {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .header__menu-panel_min {
+        .link-register {
+            display: none;
+        }
+
+        .header__menu {
+            bottom: -100px;
+
+            ul {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .presentation {
+        text-align: initial;
+
+        h1, h2 {
+            width: initial;
+        }
+
+        h1 {
+            font-size: 46px;
+            line-height: 46.14px;
+        }
+
+        h2 {
+            font-size: 20px;
+            line-height: 29px;
+        }
+    }
+
+    .free-games {
+        top: initial;
+        padding-top: 36px;
+        padding-bottom: 36px;
+
+        &__text {
+            margin-bottom: 72px;
+
+            .container {
+                flex-direction: column;
+
+                span {
+                    &:first-child {
+                        font-size: 46px;
+                        line-height: 46px;
+                        margin-bottom: 24px;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 18px;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+
+        &__swiper {
+            display: none;
+        }
+
+        &__block {
+            display: block;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        &__item {
+            margin: 32px auto 0;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .free-games__item {
+        width: 100% !important;
     }
 }
